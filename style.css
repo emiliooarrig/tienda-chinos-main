@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.portada{
+    height: 600px;
+}
+
+.portada h1{
+    font-size: 60px;
+    color: #000;
+}
+
+.beneficios{
+    background-color: #f1f1f1;
+}
+
+.beneficios h1{
+    font-weight: 500;
+    color: #000;
+}
+
+.compra{
+    height: 400px;
+}
