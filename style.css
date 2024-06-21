@@ -6,6 +6,9 @@
 
 .portada{
     height: 600px;
+    background-image: url(img/portada.png);
+    background-repeat: no-repeat;
+    background-size: auto;    
 }
 
 .portada h1{
@@ -15,6 +18,7 @@
 
 .beneficios{
     background-color: #f1f1f1;
+    height: 400px;
 }
 
 .beneficios h1{
