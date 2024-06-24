@@ -6,7 +6,6 @@
 
 .portada{
     height: 600px;
-    background-image: url(img/portada.png);
     background-repeat: no-repeat;
     background-size: auto;    
 }
