@@ -1,3 +1,18 @@
+<?php
+
+require '../config/conection.php';
+$db = new Database();
+
+$con = $db->conectar();
+
+$sql = $con->prepare("SELECT id, nombre , precio , descripcion FROM arts");
+$sql->execute();
+
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,21 +35,38 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link" href="../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="articulos/articulos.php">Productos</a>
+                        <a class="nav-link active" href="#">Productos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../login/login.php">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Mostramos todos los resultados en la base de datos -->
+            <?php foreach ($resultado as $row) { ?>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"> <?php echo $row["nombre"]; ?> </h5>
+                            <h6 class="card-subtitle"> Precio: $<?php echo $row["precio"] ?></h6>
+                            <p class="card-text"> Descripcion: <?php echo $row["descripcion"] ?> </p>
 
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
     </div>
 
 
