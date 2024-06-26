@@ -1,13 +1,11 @@
-<?php
+<?php 
 session_start();
-
-// Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['user'])) {
     header('Location: ../login/login.php');
     exit;
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +20,7 @@ if (!isset($_SESSION['user'])) {
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h2 class="text-center">Bienvenido, <?php echo htmlspecialchars($_SESSION['user']); ?>!</h2>
+                <h2 class="text-center">Bienvenido</h2>
                 <p class="text-center">Esta es una página protegida.</p>
                 <a href="../config/logout.php" class="btn btn-danger btn-block">Cerrar sesión</a>
             </div>
