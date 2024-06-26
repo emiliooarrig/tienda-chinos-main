@@ -1,6 +1,7 @@
 <?php
 session_start();
-require '../config/conection.php';
+require_once '../config/conection.php';
+
 $database = new Database();
 $pdo = $database->conectar();
 
@@ -15,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $stmt->fetch();
 
     // Verificar la contraseña
-    if ($user && password_verify($password, $user['pass'])) {
+    if ($user && $password == $user['pass']) {
         // Inicio de sesión exitoso
         $_SESSION['user'] = $user['usuario'];
         header('Location: ../admin/administrar.php');
@@ -27,3 +28,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 }
+?>
+
