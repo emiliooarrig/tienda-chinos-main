@@ -51,7 +51,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container mt-3">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <!-- Mostramos todos los resultados en la base de datos -->
             <?php foreach ($resultado as $row) { ?>
