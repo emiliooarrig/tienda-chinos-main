@@ -28,11 +28,11 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-3 mb-3">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="text-center">Bienvenido</h2>
-                <a href="../config/logout.php" class="btn btn-danger btn-block">Cerrar sesión</a>
+                <a href="agregar/agregar_prod.php" class="btn btn-primary btn-block"> Agregar producto </a>
             </div>
         </div>
     </div>
@@ -54,6 +54,10 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             <?php } ?>
         </div>
+    </div>
+
+    <div class="container d-flex justify-content-center mt-3">
+        <a href="../config/logout.php" class="btn btn-danger ">Cerrar sesión</a>
     </div>
 
 </body>
