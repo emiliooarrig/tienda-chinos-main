@@ -20,22 +20,35 @@ $stmt->execute();
 $producto = $stmt->fetch();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Actualizar los datos del producto en la base de datos
-    $nombre = $_POST['nombre'];
-    $precio = $_POST['precio'];
-    $descripcion = $_POST['descripcion'];
+    if (isset($_POST['update'])) {
+        // Actualizar los datos del producto en la base de datos
+        $nombre = $_POST['nombre'];
+        $precio = $_POST['precio'];
+        $descripcion = $_POST['descripcion'];
 
-    $stmt = $pdo->prepare("UPDATE arts SET nombre = :nombre, precio = :precio, descripcion = :descripcion WHERE id = :id");
-    $stmt->bindParam(':nombre', $nombre);
-    $stmt->bindParam(':precio', $precio);
-    $stmt->bindParam(':descripcion', $descripcion);
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt = $pdo->prepare("UPDATE arts SET nombre = :nombre, precio = :precio, descripcion = :descripcion WHERE id = :id");
+        $stmt->bindParam(':nombre', $nombre);
+        $stmt->bindParam(':precio', $precio);
+        $stmt->bindParam(':descripcion', $descripcion);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
-    if ($stmt->execute()) {
-        header('Location: administrar.php');
-        exit;
-    } else {
-        $error = "Error al actualizar el producto.";
+        if ($stmt->execute()) {
+            header('Location: administrar.php   ');
+            exit;
+        } else {
+            $error = "Error al actualizar el producto.";
+        }
+    } elseif (isset($_POST['delete'])) {
+        // Eliminar el producto de la base de datos
+        $stmt = $pdo->prepare("DELETE FROM arts WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        if ($stmt->execute()) {
+            header('Location: administrar.php');
+            exit;
+        } else {
+            $error = "Error al eliminar el producto.";
+        }
     }
 }
 ?>
@@ -51,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-3">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="text-center">Editar Producto</h2>
@@ -71,9 +84,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="descripcion">Descripción</label>
                         <textarea name="descripcion" class="form-control" required><?php echo htmlspecialchars($producto['descripcion']); ?></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Actualizar</button>
-                    <a href="administrar.php" class="btn btn-secondary btn-block">Cancelar</a>
+                    <div class="form-group d-flex justify-content-around">
+                        <button type="submit" name ="update" class="btn btn-primary ">Actualizar</button>
+                        <button type ="submit" name = "delete" class="btn btn-danger">Eliminar</button>
+                    </div>
                 </form>
+                <a href="administrar.php" class="btn btn-secondary btn-block">Cancelar</a>
             </div>
         </div>
     </div>
