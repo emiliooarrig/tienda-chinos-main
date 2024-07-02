@@ -39,9 +39,9 @@
         <h3> Productos de calidad </h3>
     </div>
 
-    <div class="container-fluid d-flex justify-content-center align-items-center flex-column beneficios">
+    <div class="container-fluid d-flex justify-content-around align-items-center flex-column beneficios">
         <h1> Sobre la tienda: </h1>
-        <div class="row justify-content-center">
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
             <div class="col d-flex flex-column align-items-center justify-content-center text-center">
                 <img src="img/apreton-de-manos.png" alt="" class="w-25">
                 <h1> Confiables </h1>
@@ -58,39 +58,60 @@
     </div>
 
     <div class="container compra d-flex flex-row align-items-center justify-content-center">
-
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/apreton-de-manos.png" class="d-block w-50" alt="...">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/apreton-de-manos.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/calidad.png" class="d-block w-50" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <div class="carousel-item">
-                    <img src="img/calidad.png" class="d-block w-50" alt="...">
-                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
 
-        <div class="cont1">
-            <h1> ¡Compra ahora!</h1>
-            <a href="articulos/articulos.php" class="btn btn-primary"> COMPRA</a>
+            <div class="col">
+                <h1> ¡Compra ahora!</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo similique eaque hic dolorum blanditiis in voluptate natus nisi sequi ipsa molestiae dignissimos veniam,
+                    temporibus pariatur perferendis quia commodi esse excepturi.
+                </p>
+                <a href="articulos/articulos.php" class="btn btn-primary"> COMPRA</a>
+            </div>
         </div>
-
     </div>
+
+    <footer class="container-fluid d-flex align-items-center justify-content-center text-center bg-light" style="height: 100px;">
+        <p class="fw-bolder">
+            Tienda XXXXXXX. Todos los derechos reservados
+        </p>
+    </footer>
+
+    <style>
+        @media screen and (max-width: 400px) {
+
+            .beneficios {
+                height: fit-content;
+            }
+        }
+    </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
-</html> 
+</html>

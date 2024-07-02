@@ -18,7 +18,7 @@
 
 .beneficios{
     background-color: #f1f1f1;
-    height: 400px;
+    height: fit-content;
 }
 
 .beneficios h1{
@@ -28,4 +28,8 @@
 
 .compra{
     height: 400px;
+}
+
+footer{
+    height: 100px;
 }
