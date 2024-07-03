@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindParam(':descripcion', $descripcion);
 
     if ($stmt->execute()) {
-        header('Location: ../administrar.php');
+        header('Location: ../administrar.php?status=success');
         exit;
     } else {
         $error = "Error al agregar el producto.";
