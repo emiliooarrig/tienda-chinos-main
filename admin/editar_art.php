@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
         if ($stmt->execute()) {
-            header('Location: administrar.php   ');
+            header('Location: administrar.php?status=modified');
             exit;
         } else {
             $error = "Error al actualizar el producto.";
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
         if ($stmt->execute()) {
-            header('Location: administrar.php');
+            header('Location: administrar.php?status=deleted');
             exit;
         } else {
             $error = "Error al eliminar el producto.";
