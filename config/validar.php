@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../config/conection.php';
+require_once 'conection.php';
 
 $database = new Database();
 $pdo = $database->conectar();
@@ -15,11 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
     $user = $stmt->fetch();
 
-    // Verificar la contraseña
-    if ($user && $password == $user['pass']) {
+    // Verificar la contraseña cifrada
+    if ($user && password_verify($password, $user['pass'])) {
         // Inicio de sesión exitoso
-        $_SESSION['user'] = $user['usuario'];
-        header('Location: ../admin/administrar.php');
+        $_SESSION['username'] = $username;
+        header('Location: ../admin/administrar.php?success=usuario-encontrado');
         exit;
     } else {
         // Error en el inicio de sesión
@@ -29,4 +29,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+
 
