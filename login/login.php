@@ -10,6 +10,7 @@
 
 <body>
 
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php"> Tienda </a>
@@ -31,8 +32,8 @@
             </div>
         </div>
     </nav>
-
-
+    
+    
     <div class="container d-flex flex-column justify-content-center align-items-center">
         <h2 class="text-center">Login</h2>
         <form action="../config/validar.php" method="post" autocomplete="off">
@@ -45,10 +46,20 @@
                 <input type="password" name="password" class="form-control" required>
             </div>
             <button name="btningresar" type="submit" class="btn btn-primary btn-block">Login</button>
+            <!-- Mensaje de error -->
+            <?php if (isset($_GET['status']) && $_GET['status'] == 'error') { ?>
+                <div class="container mt-3 alert alert-danger" role="alert">
+                    Usuario o contraseña incorrectos.
+                </div>
+            <?php } ?>
         </form>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 

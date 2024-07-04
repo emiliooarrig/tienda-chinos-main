@@ -23,8 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     } else {
         // Error en el inicio de sesión
-        $error = "Usuario o contraseña incorrectos.";
-        header('Location: ../login/login.php?error=' . urlencode($error));
+        header('Location: ../login/login.php?status=error');
         exit;
     }
 }
