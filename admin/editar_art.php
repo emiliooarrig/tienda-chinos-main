@@ -5,7 +5,7 @@ require_once '../config/conection.php';
 $database = new Database();
 $pdo = $database->conectar();
 
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['username'])) {
     header('Location: ../login/login.php');
     exit;
 }

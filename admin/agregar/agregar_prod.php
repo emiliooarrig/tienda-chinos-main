@@ -5,7 +5,7 @@ require '../../config/conection.php';
 $database = new Database();
 $pdo = $database->conectar();
 
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['username'])) {
     header('Location: ../login/login.php');
     exit;
 }
@@ -13,7 +13,7 @@ if (!isset($_SESSION['user'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombre = $_POST['nombre'];
     $precio = $_POST['precio'];
-    $descripcion = $_POST['descripcion'];
+    $descripcion = $_POST['descripcion'];   
 
     // Insertar el nuevo producto en la base de datos
     $stmt = $pdo->prepare("INSERT INTO arts (nombre, precio, descripcion) VALUES (:nombre, :precio, :descripcion)");
