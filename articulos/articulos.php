@@ -23,7 +23,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <title>Articulos</title>
 </head>
 
-<body>
+<body style = "background: url(../img/double-bubble-outline.png); background-repeat: repeat;">
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
