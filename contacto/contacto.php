@@ -35,24 +35,29 @@
     </nav>
 
 
-    <div class="container mt-3 text-center">
+    <div class="container mt-3 mb-3 text-center">
         <h1> ¿Como contactarnos? </h1>
     </div>
 
     <div class="container d-flex justify-content-around">
 
-        <div class="row">
-            <h1> Whatsapp</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ab dolores nisi perspiciatis ea. Error maxime voluptate eos, vitae similique enim laudantium eligendi, magnam sint a qui corrupti quaerat harum porro.
-            </p>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col d-flex justify-content-center">
+                <img src="contacto-img.png" alt="" class="w-50">
+            </div>
+            <div class="col d-flex flex-column justify-content-center">
+                <h1> Whatsapp</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ab dolores nisi perspiciatis ea. Error maxime voluptate eos, vitae similique enim laudantium eligendi, magnam sint a qui corrupti quaerat harum porro.
+                </p>
+            </div>
         </div>
 
     </div>
 
 
-    <footer class="container-fluid text-center bg-light">
+    <footer class="container-fluid text-center bg-light fixed-bottom">
         <p class="fw-bolder">
             Tienda XXXXXXX. Todos los derechos reservados
         </p>
