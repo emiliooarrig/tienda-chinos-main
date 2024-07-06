@@ -26,7 +26,7 @@
                         <a class="nav-link" href="articulos/articulos.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="contacto/contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -68,10 +68,10 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/apreton-de-manos.png" class="d-block w-50" alt="...">
+                            <img src="img/apreton-de-manos.png" class="d-block w-25" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/calidad.png" class="d-block w-50" alt="...">
+                            <img src="img/calidad.png" class="d-block w-25" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
