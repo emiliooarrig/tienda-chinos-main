@@ -55,8 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
 
-
-    <div class="container">
+    <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h2 class="text-center">Registrar Usuario</h2>
@@ -76,6 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="password" name="password" class="form-control" required>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                    <a href="administrar.php" class="btn btn-secondary btn-block">Cancelar</a>
                 </form>
             </div>
         </div>
