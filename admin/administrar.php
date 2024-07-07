@@ -24,6 +24,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Administrador de artículos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -34,14 +35,14 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                 <h2 class="text-center">Bienvenido</h2>
             </div>
         </div>
-        
+
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col-md-6 text-center mb-md-0 mt-3">
-                <a href="agregar/agregar_prod.php" class="btn btn-primary"> Agregar producto </a>
+                <a href="agregar/agregar_prod.php" class="btn btn-primary"> <i class="bi bi-plus-lg"></i> Agregar producto </a>
             </div>
-        
-            <div class="col-md-6 text-center mt-3">                
-                <a href="agregar_admin.php" class="btn btn-secondary"> Agregar administrador </a>
+
+            <div class="col-md-6 text-center mt-3">
+                <a href="agregar_admin.php" class="btn btn-secondary"> <i class="bi bi-person-add"></i> Agregar administrador </a>
             </div>
         </div>
     </div>
@@ -112,16 +113,20 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-    $(document).ready(function() {
-        <?php if (isset($_GET['status']) && $_GET['status'] == 'success') { ?>
-        $('#successToast').toast({ delay: 3000 });
-        $('#successToast').toast('show');
-        <?php } elseif (isset($_GET['status']) && $_GET['status'] == 'deleted') { ?>
-        $('#deletedToast').toast({ delay: 3000 });
-        $('#deletedToast').toast('show');
-        <?php } ?>
-    });
-</script>
+        $(document).ready(function() {
+            <?php if (isset($_GET['status']) && $_GET['status'] == 'success') { ?>
+                $('#successToast').toast({
+                    delay: 3000
+                });
+                $('#successToast').toast('show');
+            <?php } elseif (isset($_GET['status']) && $_GET['status'] == 'deleted') { ?>
+                $('#deletedToast').toast({
+                    delay: 3000
+                });
+                $('#deletedToast').toast('show');
+            <?php } ?>
+        });
+    </script>
 </body>
 
 </html>
