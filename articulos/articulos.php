@@ -5,7 +5,7 @@ $db = new Database();
 
 $con = $db->conectar();
 
-$sql = $con->prepare("SELECT id, nombre , precio , descripcion FROM arts");
+$sql = $con->prepare("SELECT id, nombre , precio , descripcion, imagen FROM arts");
 $sql->execute();
 
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -58,6 +58,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             <?php foreach ($resultado as $row) { ?>
                 <div class="col">
                     <div class="card">
+                    <img src="<?php echo $row['imagen']; ?>" class="card-img-top w-25">
                         <div class="card-body">
                             <h5 class="card-title"> <?php echo $row["nombre"]; ?> </h5>
                             <h6 class="card-subtitle"> Precio: $<?php echo $row["precio"] ?></h6>
