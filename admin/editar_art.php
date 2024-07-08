@@ -39,16 +39,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $error = "Error al actualizar el producto.";
         }
     } elseif (isset($_POST['delete'])) {
-        // Eliminar el producto de la base de datos
-        $stmt = $pdo->prepare("DELETE FROM arts WHERE id = :id");
+        
+        $stmt = $pdo->prepare("SELECT imagen FROM arts WHERE id = :id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        $producto = $stmt->fetch();
+        
+        if($producto){
+            $rutaImagen = $producto['imagen'];
+            //Eliminamos el producto de la DB
+            $stmt = $pdo->prepare("DELETE FROM arts WHERE id = :id");
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
-        if ($stmt->execute()) {
-            header('Location: administrar.php?status=deleted');
-            exit;
-        } else {
-            $error = "Error al eliminar el producto.";
+            if ($stmt->execute()) {
+                if(file_exists($rutaImagen)){
+                    unlink($rutaImagen);
+                }
+                header('Location: administrar.php?status=deleted');
+                exit;
+            } else {
+                $error = "Error al eliminar el producto.";
+            }
         }
+
     }
 }
 ?>
