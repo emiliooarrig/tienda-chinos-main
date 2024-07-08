@@ -35,30 +35,32 @@
     </nav>
 
 
-    <div class="container d-flex flex-column justify-content-center align-items-center">
-        <h2 class="text-center">Login</h2>
-        <form action="../config/validar.php" method="post" autocomplete="off">
-            <div class="mb-3">
-                <label class="form-label" for="username"> User </label>
-                <input type="text" name="username" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="password"> Contraseña </label>
-                <div class="input-group">
-                    <input type="password" name="password" id="password" class="form-control" required>
-                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
-                        <i class="bi bi-eye-slash"></i>
-                    </button>
+    <div class="container d-flex align-items-center" style = "height: 900px;">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h2 class="text-center">Login</h2>
+            <form action="../config/validar.php" method="post" autocomplete="off">
+                <div class="mb-3">
+                    <label class="form-label" for="username"> User </label>
+                    <input type="text" name="username" class="form-control" required>
                 </div>
-            </div>
-            <button name="btningresar" type="submit" class="btn btn-primary btn-block">Login</button>
-            <!-- Mensaje de error -->
-            <?php if (isset($_GET['status']) && $_GET['status'] == 'error') { ?>
-                <div class="container mt-3 alert alert-danger" role="alert">
-                    Usuario o contraseña incorrectos.
+                <div class="mb-3">
+                    <label class="form-label" for="password"> Contraseña </label>
+                    <div class="input-group">
+                        <input type="password" name="password" id="password" class="form-control" required>
+                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                            <i class="bi bi-eye-slash"></i>
+                        </button>
+                    </div>
                 </div>
-            <?php } ?>
-        </form>
+                <button name="btningresar" type="submit" class="btn btn-primary btn-block">Login</button>
+                <!-- Mensaje de error -->
+                <?php if (isset($_GET['status']) && $_GET['status'] == 'error') { ?>
+                    <div class="container mt-3 alert alert-danger" role="alert">
+                        Usuario o contraseña incorrectos.
+                    </div>
+                <?php } ?>
+            </form>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
