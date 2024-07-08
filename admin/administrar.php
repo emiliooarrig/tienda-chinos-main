@@ -38,7 +38,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col-md-6 text-center mb-md-0 mt-3">
-                <a href="agregar/agregar_prod.php" class="btn btn-primary"> <i class="bi bi-plus-lg"></i> Agregar producto </a>
+                <a href="agregar_prod.php" class="btn btn-primary"> <i class="bi bi-plus-lg"></i> Agregar producto </a>
             </div>
 
             <div class="col-md-6 text-center mt-3">
@@ -58,7 +58,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                             <h5 class="card-title"> <?php echo $row["nombre"]; ?> </h5>
                             <h6 class="card-subtitle"> Precio: $<?php echo $row["precio"] ?></h6>
                             <p class="card-text"> Descripcion: <?php echo $row["descripcion"] ?> </p>
-                            <a href="editar_art.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="editar_art.php?id=<?php echo $row['id']; ?>" class="btn btn-primary"> <i class="bi bi-pencil"></i> Editar</a>
                         </div>
                     </div>
                 </div>
@@ -67,13 +67,13 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <div class="container d-flex justify-content-center mt-3">
-        <a href="../config/logout.php" class="btn btn-danger mb-3">Cerrar sesión</a>
+        <a href="../config/logout.php" class="btn btn-danger mb-3"> <i class="bi bi-person-x"></i> Cerrar sesión</a>
     </div>
 
     <div class="toast-container">
         <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header bg-success">
-                <strong class="mr-auto">Éxito</strong>
+                <strong class="mr-auto text-white">Éxito</strong>
                 <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -87,7 +87,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <div class="toast-container">
         <div id="deletedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header bg-danger">
-                <strong class="mr-auto">Éxito</strong>
+                <strong class="mr-auto text-white">Éxito</strong>
                 <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
