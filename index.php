@@ -96,7 +96,7 @@
         </div>
     </div>
 
-    <footer class="container-fluid d-flex align-items-center justify-content-center text-center bg-light" style="height: 100px;">
+    <footer class="container-fluid d-flex align-items-center justify-content-center bg-light" style="height: 100px;">
         <p class="fw-bolder">
             Tienda XXXXXXX. Todos los derechos reservados
         </p>
