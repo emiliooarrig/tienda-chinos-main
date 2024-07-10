@@ -42,7 +42,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                         <a class="nav-link active" href="#">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="../contacto/contacto.php">Contacto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../login/login.php"> <i class="bi bi-person-circle"></i></a>
