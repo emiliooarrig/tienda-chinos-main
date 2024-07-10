@@ -39,9 +39,9 @@
         <h1> ¿Como contactarnos? </h1>
     </div>
 
-    <div class="container d-flex justify-content-around">
+    <div class="container d-flex flex-column justify-content-around">
 
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
             <div class="col d-flex justify-content-center">
                 <img src="contacto-img.png" alt="" class="w-50">
             </div>
@@ -54,10 +54,23 @@
             </div>
         </div>
 
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+            <div class="col d-flex flex-column justify-content-center">
+                <h1> Correo electrónico </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nihil quaerat nesciunt quos?
+                    Explicabo rerum, voluptatem libero eaque quo autem quidem vitae mollitia commodi a quis ab aut inventore omnis.
+                </p>
+            </div>
+
+            <div class="col d-flex flex-column align-items-center">
+                <img src="../img/correo-electronico.png" alt="" class="w-50">
+            </div>
+        </div>
     </div>
 
 
-    <footer class="container-fluid text-center bg-light fixed-bottom">
+    <footer class="container-fluid d-flex align-items-center justify-content-center bg-light fixed-bottom" style="height: 100px;">
         <p class="fw-bolder">
             Tienda XXXXXXX. Todos los derechos reservados
         </p>
