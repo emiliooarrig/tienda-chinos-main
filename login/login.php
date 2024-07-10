@@ -9,7 +9,7 @@
     <title>Login</title>
 </head>
 
-<body>
+<body style="background: url(waves.png); background-size: cover; background-repeat: no-repeat; background-position: 0px;">
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,7 +27,10 @@
                         <a class="nav-link" href="../articulos/articulos.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="../contacto/contacto.php">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"> <i class="bi bi-person-circle"></i></a>
                     </li>
                 </ul>
             </div>
@@ -35,40 +38,49 @@
     </nav>
 
 
-    <div class="container d-flex align-items-center" style = "height: 900px;">
-        <div class="container d-flex flex-column justify-content-center align-items-center">
-            <h2 class="text-center">Login</h2>
-            <form action="../config/validar.php" method="post" autocomplete="off">
-                <div class="mb-3">
+    <div class="container d-flex align-items-center justify-content-center" style="height: 900px;">
+        <div class="row row-cols-1">
+            <div class="col d-flex flex-column justify-content-center align-items-center shadow bg-light bg-gradient">
+                <img src="usuario.png" alt="" class="w-25 mt-3">
+                <h2 class="text-center">Login</h2>
+
+                <form action="../config/validar.php" method="post" autocomplete="off">
                     <label class="form-label" for="username"> User </label>
-                    <input type="text" name="username" class="form-control" required>
-                </div>
-                <div class="mb-3">
+                    <div class="input-group mb-3">
+                        <i class="bi bi-person-circle input-group-text"></i>
+                        <input type="text" name="username" class="form-control" placeholder="ej. admin " required>
+                    </div>
+
                     <label class="form-label" for="password"> Contraseña </label>
-                    <div class="input-group">
-                        <input type="password" name="password" id="password" class="form-control" required>
+                    <div class="input-group mb-3">
+                        <i class="bi bi-lock input-group-text"></i>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="ej. 1234" required>
                         <button class="btn btn-outline-secondary" type="button" id="togglePassword">
                             <i class="bi bi-eye-slash"></i>
                         </button>
                     </div>
-                </div>
-                <button name="btningresar" type="submit" class="btn btn-primary btn-block">Login</button>
-                <!-- Mensaje de error -->
-                <?php if (isset($_GET['status']) && $_GET['status'] == 'error') { ?>
-                    <div class="container mt-3 alert alert-danger" role="alert">
-                        Usuario o contraseña incorrectos.
-                    </div>
-                <?php } ?>
-            </form>
+
+                    <button name="btningresar" type="submit" class="btn btn-primary btn-block mb-3">Login</button>
+                    <!-- Mensaje de error -->
+                    <?php if (isset($_GET['status']) && $_GET['status'] == 'error') { ?>
+                        <div class="container mt-3 alert alert-danger" role="alert">
+                            Usuario o contraseña incorrectos.
+                        </div>
+                    <?php } ?>
+                </form>
+            </div>
         </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 
     <script>
-        document.getElementById('togglePassword').addEventListener('click', function (e) {
+        document.getElementById('togglePassword').addEventListener('click', function(e) {
             const password = document.getElementById('password');
             const icon = document.getElementById('togglePasswordIcon');
             if (password.type === 'password') {
