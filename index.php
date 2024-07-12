@@ -38,59 +38,20 @@
     </nav>
 
 
-    <div class="container-fluid d-flex flex-column align-items-center justify-content-center portada">
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center portada" style="background: url(img/img-index-2.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <h1> TIENDA XXXXXXX</h1>
         <h3> Productos de calidad </h3>
     </div>
 
-    <div class="container-fluid d-flex justify-content-around align-items-center flex-column beneficios">
-        <h1> Sobre la tienda: </h1>
-        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-            <div class="col d-flex flex-column align-items-center justify-content-center text-center">
-                <img src="img/apreton-de-manos.png" alt="" class="w-25">
-                <h1> Confiables </h1>
-            </div>
-            <div class="col d-flex flex-column align-items-center justify-content-center text-center">
-                <img src="img/calidad.png" alt="" class="w-25">
-                <h1> Calidad </h1>
-            </div>
-            <div class="col d-flex flex-column align-items-center justify-content-center text-center">
-                <img src="img/entrega-de-paquetes.png" alt="" class="w-25">
-                <h1> Entrega rapida </h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="container compra d-flex flex-row align-items-center justify-content-center">
+    
+    <div class="container compra d-flex flex-row align-items-center justify-content-center mt-3 mb-3">
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
-                <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/apreton-de-manos.png" class="d-block w-25" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/calidad.png" class="d-block w-25" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+                <img src="img/fondo-index.jpg" alt="" class="img w-75">
             </div>
-
-            <div class="col">
-                <h1> ¡Compra ahora!</h1>
+            
+            <div class="col align-items-center">
+                <h1 class = "text-dark"> ¡Compra ahora!</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo similique eaque hic dolorum blanditiis in voluptate natus nisi sequi ipsa molestiae dignissimos veniam,
                     temporibus pariatur perferendis quia commodi esse excepturi.
@@ -99,8 +60,26 @@
             </div>
         </div>
     </div>
+    
+    <div class="container-fluid d-flex justify-content-around align-items-center flex-column mt-3 mb-3 p-5 beneficios">
+        <h1> Nuestras ventajas:  </h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <div class="col d-flex flex-column align-items-center justify-content-center text-center">
+                <img src="img/apreton-de-manos.png" alt="" class="w-25">
+                <h1 class="fw-light"> Confiables </h1>
+            </div>
+            <div class="col d-flex flex-column align-items-center justify-content-center text-center">
+                <img src="img/calidad.png" alt="" class="w-25">
+                <h1 class = "fw-light"> Calidad </h1>
+            </div>
+            <div class="col d-flex flex-column align-items-center justify-content-center text-center">
+                <img src="img/entrega-de-paquetes.png" alt="" class="w-25">
+                <h1 class = "fw-light"> Entrega rapida </h1>
+            </div>
+        </div>
+    </div>
 
-    <footer class="container-fluid d-flex align-items-center justify-content-center bg-light" style="height: 100px;">
+    <footer class="container-fluid d-flex align-items-center justify-content-center bg-light mt-3" style="height: 100px;">
         <p class="fw-bolder">
             Tienda XXXXXXX. Todos los derechos reservados
         </p>
