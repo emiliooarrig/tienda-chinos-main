@@ -16,13 +16,13 @@
     background-color: #fff;
 }
 
-.beneficios{
+/* .beneficios{
     background-color: #f1f1f1;
     height: fit-content;
-}
+} */
 
 .beneficios h1{
-    font-weight: 500;
+    font-weight: 300;
     color: #000;
 }
 
