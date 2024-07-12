@@ -10,7 +10,7 @@
     <title>Contacto</title>
 </head>
 
-<body>
+<body style="background: url(../img/double-bubble-outline.png);">
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,13 +39,13 @@
     </nav>
 
 
-    <div class="container mt-3 mb-3 text-center">
-        <h1> ¿Como contactarnos? </h1>
+    <div class="container-fluid mb-3 text-center text-light p-5" style="background-color: #343A40;">
+        <h1 class = "fw-bolder"> ¿Como contactarnos? </h1>
     </div>
 
     <div class="container d-flex flex-column justify-content-around">
 
-        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3 bg-light shadow">
             <div class="col d-flex justify-content-center">
                 <img src="contacto-img.png" alt="" class="w-50">
             </div>
@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3 bg-light shadow">
             <div class="col d-flex flex-column justify-content-center">
                 <h1> Correo electrónico </h1>
                 <p>
@@ -74,7 +74,7 @@
     </div>
 
 
-    <footer class="container-fluid d-flex align-items-center justify-content-center bg-light fixed-bottom" style="height: 100px;">
+    <footer class="container-fluid d-flex align-items-center justify-content-center text-light mt-3" style="height: 100px; background-color: #343A40;">
         <p class="fw-bolder">
             Tienda XXXXXXX. Todos los derechos reservados
         </p>
