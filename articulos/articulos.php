@@ -52,6 +52,10 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </nav>
 
+    <div class="container-fluid mb-3 text-center p-5 text-light" style="background-color: #343A40;">
+        <h1 class = "fw-bolder"> Nuestros artículos </h1>
+    </div>
+
     <div class="container mt-3">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <!-- Mostramos todos los resultados en la base de datos -->
