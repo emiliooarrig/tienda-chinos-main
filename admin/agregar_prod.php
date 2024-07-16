@@ -56,14 +56,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Agregar producto </title>
 </head>
 
-<body>
+<body style = "background: url(../login/waves.png); background-size: cover; background-repeat: no-repeat; background-position: 0px;">
 
-    <div class="container mt-3">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+    <div class="container d-flex flex-column justify-content-center mt-4" style = "height: 900px;">
+        <div class="row row-cols-1 justify-content-center">
+            <div class="col-10 col-md-6 shadow">
                 <h2 class="text-center">Agregar producto</h2>
                 <?php if (isset($error)) {
                     echo '<div class="alert alert-danger">' . htmlspecialchars($error) . '</div>';
@@ -86,15 +87,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="file" name="imagen" class="form-control" required>
                     </div>
                     <div class="form-group d-flex justify-content-around">
-                        <button type="submit" name="update" class="btn btn-primary btn-block"> Publicar </button>
+                        <button type="submit" name="update" class="btn btn-primary btn-block"> <i class="bi bi-cloud-plus-fill"></i> Publicar </button>
                     </div>
                 </form>
-                <a href="administrar.php" class="btn btn-secondary btn-block">Cancelar</a>
+                <a href="administrar.php" class="btn btn-secondary btn-block mb-3">Cancelar</a>
             </div>
         </div>
     </div>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 
 </body>
 
