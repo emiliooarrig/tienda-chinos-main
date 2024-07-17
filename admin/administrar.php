@@ -98,6 +98,19 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
 
+    <div class="toast-container">
+        <div id="updateToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-primary">
+                <strong class="mr-auto text-white">Éxito</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Producto modificado correctamente.
+            </div>
+        </div>
+    </div>
 
     <style>
         .toast-container {
@@ -124,6 +137,12 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                     delay: 3000
                 });
                 $('#deletedToast').toast('show');
+            <?php } elseif (isset($_GET['status']) && $_GET['status'] == 'modified') { ?>
+
+                $('#updateToast').toast({
+                    delay: 3000
+                });
+                $('#updateToast').toast('show');
             <?php } ?>
         });
     </script>
