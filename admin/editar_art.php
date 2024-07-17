@@ -39,20 +39,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $error = "Error al actualizar el producto.";
         }
     } elseif (isset($_POST['delete'])) {
-        
+
         $stmt = $pdo->prepare("SELECT imagen FROM arts WHERE id = :id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         $producto = $stmt->fetch();
-        
-        if($producto){
+
+        if ($producto) {
             $rutaImagen = $producto['imagen'];
             //Eliminamos el producto de la DB
             $stmt = $pdo->prepare("DELETE FROM arts WHERE id = :id");
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
             if ($stmt->execute()) {
-                if(file_exists($rutaImagen)){
+                if (file_exists($rutaImagen)) {
                     unlink($rutaImagen);
                 }
                 header('Location: administrar.php?status=deleted');
@@ -61,7 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $error = "Error al eliminar el producto.";
             }
         }
-
     }
 }
 ?>
@@ -76,10 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container mt-3">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+<body style = "background: url(../login/waves.png); background-size: cover; background-repeat: no-repeat; background-position: 0px;">
+    <div class="container d-flex flex-column justify-content-center mt-3" style="height: 900px;">
+        <div class="row row-cols-1 justify-content-center">
+            <div class="col-10 col-md-6 shadow">
                 <h2 class="text-center">Editar Producto</h2>
                 <?php if (isset($error)) {
                     echo '<div class="alert alert-danger">' . htmlspecialchars($error) . '</div>';
@@ -98,11 +97,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <textarea name="descripcion" class="form-control" required><?php echo htmlspecialchars($producto['descripcion']); ?></textarea>
                     </div>
                     <div class="form-group d-flex justify-content-around">
-                        <button type="submit" name ="update" class="btn btn-primary ">Actualizar</button>
-                        <button type ="submit" name = "delete" class="btn btn-danger">Eliminar</button>
+                        <button type="submit" name="update" class="btn btn-primary ">Actualizar</button>
+                        <button type="submit" name="delete" class="btn btn-danger">Eliminar</button>
                     </div>
                 </form>
-                <a href="administrar.php" class="btn btn-secondary btn-block">Cancelar</a>
+                <a href="administrar.php" class="btn btn-secondary btn-block mb-3">Cancelar</a>
             </div>
         </div>
     </div>
