@@ -45,7 +45,7 @@
 
     <div class="container d-flex flex-column justify-content-around">
 
-        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3 bg-light shadow">
+        <div class="row row-cols-1 row-cols-md-2 mt-3 bg-light shadow">
             <div class="col d-flex justify-content-center">
                 <img src="contacto-img.png" alt="" class="w-50">
             </div>
@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3 bg-light shadow">
+        <div class="row row-cols-1 row-cols-md-2 mt-3 bg-light shadow">
             <div class="col d-flex flex-column justify-content-center">
                 <h1> Correo electrónico </h1>
                 <p>

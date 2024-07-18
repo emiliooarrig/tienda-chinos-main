@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Inicio</title>
 </head>
 
@@ -38,20 +38,29 @@
     </nav>
 
 
+    <style>
+        .portada {
+
+            height: 600px;
+            background-repeat: no-repeat;
+            background-size: auto;
+
+        }
+    </style>
     <div class="container-fluid d-flex flex-column align-items-center justify-content-center portada" style="background: url(img/img-index-2.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
         <h1> TIENDA XXXXXXX</h1>
         <h3> Productos de calidad </h3>
     </div>
 
-    
+
     <div class="container compra d-flex flex-row align-items-center justify-content-center mt-3 mb-3">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col-10 col-md-5">
                 <img src="img/fondo-index.jpg" alt="" class="img w-75">
             </div>
-            
-            <div class="col align-items-center">
-                <h1 class = "text-dark"> ¡Compra ahora!</h1>
+
+            <div class="col-10 col-md-5 align-items-center">
+                <h1 class="text-dark"> ¡Compra ahora!</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo similique eaque hic dolorum blanditiis in voluptate natus nisi sequi ipsa molestiae dignissimos veniam,
                     temporibus pariatur perferendis quia commodi esse excepturi.
@@ -60,26 +69,42 @@
             </div>
         </div>
     </div>
-    
-    <div class="container-fluid d-flex justify-content-around align-items-center flex-column mt-3 mb-3 p-5 beneficios">
-        <h1> Nuestras ventajas:  </h1>
-        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
+    <div class="container-fluid d-flex justify-content-around bg-light align-items-center flex-column mt-3 mb-3 p-5 beneficios">
+        <h1> Nuestras ventajas: </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cumque ipsa fugit tempora debitis similique optio illum a
+        </p>
+        <div class="row row-cols-1 row-cols-md-3 justify-content-center">
             <div class="col d-flex flex-column align-items-center justify-content-center text-center">
                 <img src="img/apreton-de-manos.png" alt="" class="w-25">
                 <h1 class="fw-light"> Confiables </h1>
             </div>
             <div class="col d-flex flex-column align-items-center justify-content-center text-center">
                 <img src="img/calidad.png" alt="" class="w-25">
-                <h1 class = "fw-light"> Calidad </h1>
+                <h1 class="fw-light"> Calidad </h1>
             </div>
             <div class="col d-flex flex-column align-items-center justify-content-center text-center">
                 <img src="img/entrega-de-paquetes.png" alt="" class="w-25">
-                <h1 class = "fw-light"> Entrega rapida </h1>
+                <h1 class="fw-light"> Entrega rapida </h1>
             </div>
         </div>
     </div>
 
-    <footer class="container-fluid d-flex align-items-center justify-content-center bg-light mt-3" style="height: 100px;">
+    <div class="container d-flex flex-column justify-content-center" style="height: 300px;">
+        <div class="row">
+            <div class="col text-center">
+                <h1> Contactanos </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error adipisci harum quod aspernatur repudiandae iusto natus similique,
+                </p>
+
+                <a href="contacto/contacto.php" class="btn btn-primary"> Contacto </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid d-flex align-items-center justify-content-center text-light mt-3" style="height: 100px; background-color: #343A40;">
         <p class="fw-bolder">
             Tienda XXXXXXX. Todos los derechos reservados
         </p>
