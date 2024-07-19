@@ -53,15 +53,15 @@
     </div>
 
 
-    <div class="container compra d-flex flex-row align-items-center justify-content-center mt-3 mb-3">
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col-10 col-md-5">
+    <div class="container compra d-flex flex-row align-items-center justify-content-center mt-3 mb-3 p-3 p-sm-5">
+        <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+            <div class="col">
                 <img src="img/fondo-index.jpg" alt="" class="img w-75">
             </div>
 
-            <div class="col-10 col-md-5 align-items-center">
+            <div class="col">
                 <h1 class="text-dark"> ¡Compra ahora!</h1>
-                <p>
+                <p class="fs-6">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo similique eaque hic dolorum blanditiis in voluptate natus nisi sequi ipsa molestiae dignissimos veniam,
                     temporibus pariatur perferendis quia commodi esse excepturi.
                 </p>
@@ -70,12 +70,12 @@
         </div>
     </div>
 
-    <div class="container-fluid d-flex justify-content-around bg-light align-items-center flex-column mt-3 mb-3 p-5 beneficios">
+    <div class="container-fluid d-flex justify-content-around bg-light align-items-center flex-column mt-3 mb-3 p-3 p-sm-5 beneficios">
         <h1> Nuestras ventajas: </h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cumque ipsa fugit tempora debitis similique optio illum a
         </p>
-        <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+        <div class="row justify-content-center">
             <div class="col d-flex flex-column align-items-center justify-content-center text-center">
                 <img src="img/apreton-de-manos.png" alt="" class="w-25">
                 <h1 class="fw-light"> Confiables </h1>
