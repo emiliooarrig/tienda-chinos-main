@@ -24,22 +24,40 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <title>Articulos</title>
 </head>
 
-<body style = "background: url(../img/double-bubble-outline.png); background-repeat: repeat;">
+<body style="background: url(../img/double-bubble-outline.png); background-repeat: repeat;">
 
+    <style>
+         .nav-item{
+            opacity: 1;
+            border-bottom: 2px solid transparent;
+            transition: .3s all;
+        }
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        .nav-item:hover{
+            border-bottom: 2px solid #E2C044;
+        }
+        
+        .nav-link{
+            color: #fff;
+        }
+        .nav-link:hover{
+            color: #E2C044;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg p-4 p-sm-4" style="height: 100%; background-color: #2E5266;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Tienda</a>
+            <a class="navbar-brand" href="index.php"> Tienda </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.php">Inicio</a>
+                        <a class="nav-link" aria-current="page" href="../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Productos</a>
+                        <a class="nav-link" href="">Productos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../contacto/contacto.php">Contacto</a>
@@ -52,8 +70,8 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </nav>
 
-    <div class="container-fluid mb-3 text-center p-5 text-light" style="background-color: #343A40;">
-        <h1 class = "fw-bolder"> Nuestros artículos </h1>
+    <div class="container-fluid mb-3 text-center p-5 text-dark" style="background-color: rgb(226,192,68);">
+        <h1 class="fw-bolder"> Nuestros artículos </h1>
     </div>
 
     <div class="container mt-3">
@@ -62,7 +80,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             <?php foreach ($resultado as $row) { ?>
                 <div class="col">
                     <div class="card">
-                    <img src="<?php echo $row['imagen']; ?>" class="card-img-top w-25">
+                        <img src="<?php echo $row['imagen']; ?>" class="card-img-top w-25">
                         <div class="card-body">
                             <h5 class="card-title"> <?php echo $row["nombre"]; ?> </h5>
                             <h6 class="card-subtitle"> Precio: $<?php echo $row["precio"] ?></h6>

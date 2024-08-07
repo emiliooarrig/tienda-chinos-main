@@ -12,7 +12,26 @@
 <body style="background: url(waves.png); background-size: cover; background-repeat: no-repeat; background-position: 0px;">
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <style>
+        .nav-item {
+            opacity: 1;
+            border-bottom: 2px solid transparent;
+            transition: .3s all;
+        }
+
+        .nav-item:hover {
+            border-bottom: 2px solid #E2C044;
+        }
+
+        .nav-link {
+            color: #fff;
+        }
+
+        .nav-link:hover {
+            color: #E2C044;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg p-4 p-sm-4" style="height: 100%; background-color: #2E5266;">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php"> Tienda </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
