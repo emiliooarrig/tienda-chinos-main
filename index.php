@@ -12,7 +12,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg p-4 p-sm-4" style="height: 100%; background-color: #2E5266;">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php"> Tienda </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,14 +40,52 @@
 
     <style>
         .portada {
-
             height: 600px;
+            background: url(img/img-index-2.jpg);
+            background-size: cover;
             background-repeat: no-repeat;
-            background-size: auto;
-
+            background-position: center;
         }
+
+        .beneficios {
+            background-color: #f1f1f1;
+            height: fit-content;
+        }
+
+        .nav-item{
+            opacity: 1;
+            border-bottom: 2px solid transparent;
+            transition: .3s all;
+        }
+
+        .nav-item:hover{
+            border-bottom: 2px solid #E2C044;
+        }
+        
+        .nav-link{
+            color: #fff;
+        }
+        .nav-link:hover{
+            color: #E2C044;
+        }
+
+        .btn-compra{
+            background-color:#E2C044;
+            color: #fff;
+            transition: .3s all;
+        }
+
+        .btn-compra:hover{
+            background-color: #D3A500;
+        }
+        @media (max-width: 575px) {
+            .portada {
+                background-position-x: -150px;
+            }
+        }
+
     </style>
-    <div class="container-fluid d-flex flex-column align-items-center justify-content-center portada" style="background: url(img/img-index-2.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center portada">
         <h1> TIENDA XXXXXXX</h1>
         <h3> Productos de calidad </h3>
     </div>
@@ -55,8 +93,8 @@
 
     <div class="container compra d-flex flex-row align-items-center justify-content-center mt-3 mb-3 p-3 p-sm-5">
         <div class="row row-cols-1 row-cols-md-3 justify-content-center">
-            <div class="col">
-                <img src="img/fondo-index.jpg" alt="" class="img w-75">
+            <div class="col text-center">
+                <img src="img/fondo-index.jpg" alt="" class="img w-100">
             </div>
 
             <div class="col">
@@ -65,17 +103,17 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo similique eaque hic dolorum blanditiis in voluptate natus nisi sequi ipsa molestiae dignissimos veniam,
                     temporibus pariatur perferendis quia commodi esse excepturi.
                 </p>
-                <a href="articulos/articulos.php" class="btn btn-primary"> COMPRA</a>
+                <a href="articulos/articulos.php" class="btn btn-compra p-2 p-sm-3"> COMPRA</a>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid d-flex justify-content-around bg-light align-items-center flex-column mt-3 mb-3 p-3 p-sm-5 beneficios">
+    <div class="container-fluid d-flex justify-content-around align-items-center flex-column mt-3 mb-3 p-3 p-sm-5 beneficios">
         <h1> Nuestras ventajas: </h1>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cumque ipsa fugit tempora debitis similique optio illum a
         </p>
-        <div class="row justify-content-center">
+        <div class="row row-cols-1 row-cols-md-3 justify-content-center">
             <div class="col d-flex flex-column align-items-center justify-content-center text-center">
                 <img src="img/apreton-de-manos.png" alt="" class="w-25">
                 <h1 class="fw-light"> Confiables </h1>
@@ -86,7 +124,7 @@
             </div>
             <div class="col d-flex flex-column align-items-center justify-content-center text-center">
                 <img src="img/entrega-de-paquetes.png" alt="" class="w-25">
-                <h1 class="fw-light"> Entrega rapida </h1>
+                <h1 class="fw-light"> Entrega rápida </h1>
             </div>
         </div>
     </div>
@@ -99,25 +137,16 @@
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error adipisci harum quod aspernatur repudiandae iusto natus similique,
                 </p>
 
-                <a href="contacto/contacto.php" class="btn btn-primary"> Contacto </a>
+                <a href="contacto/contacto.php" class="btn btn-compra p-3 p-sm-4"> Contacto </a>
             </div>
         </div>
     </div>
 
-    <footer class="container-fluid d-flex align-items-center justify-content-center text-light mt-3" style="height: 100px; background-color: #343A40;">
-        <p class="fw-bolder">
+    <footer class="container-fluid d-flex align-items-center justify-content-center text-light mt-3" style="height: 100px; background-color: #2E5266;">
+        <p class="fw-bolder fs-6">
             Tienda XXXXXXX. Todos los derechos reservados
         </p>
     </footer>
-
-    <style>
-        @media screen and (max-width: 400px) {
-
-            .beneficios {
-                height: fit-content;
-            }
-        }
-    </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
