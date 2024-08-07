@@ -28,7 +28,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body style = "background: url(../img/double-bubble-outline.png)">
     <div class="container mt-3 mb-3">
         <div class="row justify-content-center">
             <div class="col-md-6">
